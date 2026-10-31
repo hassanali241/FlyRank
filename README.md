@@ -2,12 +2,16 @@
 
 ## My submissions
 
-Track: ML (Applied Search Intelligence). Each assignment has an index folder at the root; notebooks live in `work/notebooks/` as the internship requires.
+Track: ML (Applied Search Intelligence). Locked lane: Lane 2, Refresh / Content Opportunity Scoring. Each assignment has an index folder at the root; notebooks live in `work/notebooks/` as the internship requires.
 
 | Assignment | Folder | Notebook |
 |---|---|---|
 | 01 (ML-02) Research question and provisional lane | [`assignment-01/`](assignment-01/) | [`w01_research_question.ipynb`](work/notebooks/w01_research_question.ipynb) |
 | 02 (ML-03) Frame the lane as an ML task | [`assignment-02/`](assignment-02/) | [`w02_ml_task_framing.ipynb`](work/notebooks/w02_ml_task_framing.ipynb) |
+| 03 (ML-04) Search intelligence data contract | [`assignment-03/`](assignment-03/) | [`w03_data_contract.ipynb`](work/notebooks/w03_data_contract.ipynb) |
+| 04 (ML-07) Baseline action score and top-10 review | [`assignment-04/`](assignment-04/) | [`w04_baseline_score.ipynb`](work/notebooks/w04_baseline_score.ipynb) |
+| 05 (ML-08) Capstone modeling lane | [`assignment-05/`](assignment-05/) | [`w05_model.ipynb`](work/notebooks/w05_model.ipynb) |
+| 06 (ML-09) Validation and research claim audit | [`assignment-06/`](assignment-06/) | [`w06_validation_audit.ipynb`](work/notebooks/w06_validation_audit.ipynb) |
 
 ---
 
