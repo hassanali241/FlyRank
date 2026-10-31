@@ -1,5 +1,15 @@
 # FlyRank ML Internship — Starter Repo
 
+## My submissions
+
+Track: ML (Applied Search Intelligence). Each assignment has an index folder at the root; notebooks live in `work/notebooks/` as the internship requires.
+
+| Assignment | Folder | Notebook |
+|---|---|---|
+| 01 (ML-02) Research question and provisional lane | [`assignment-01/`](assignment-01/) | [`w01_research_question.ipynb`](work/notebooks/w01_research_question.ipynb) |
+
+---
+
 **Applied Search Intelligence: Google Search Ranking & Discoverability**
 
 This is the starting point for the FlyRank ML Internship. You **clone it into your own public
