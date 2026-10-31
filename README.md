@@ -12,6 +12,9 @@ Track: ML (Applied Search Intelligence). Locked lane: Lane 2, Refresh / Content 
 | 04 (ML-07) Baseline action score and top-10 review | [`assignment-04/`](assignment-04/) | [`w04_baseline_score.ipynb`](work/notebooks/w04_baseline_score.ipynb) |
 | 05 (ML-08) Capstone modeling lane | [`assignment-05/`](assignment-05/) | [`w05_model.ipynb`](work/notebooks/w05_model.ipynb) |
 | 06 (ML-09) Validation and research claim audit | [`assignment-06/`](assignment-06/) | [`w06_validation_audit.ipynb`](work/notebooks/w06_validation_audit.ipynb) |
+| Capstone (ML-11) Which pages should a content team review first? | [`capstone/`](capstone/) | [`capstone.ipynb`](work/notebooks/capstone.ipynb) |
+
+**Research paper:** https://hassanali241.github.io/FlyRank/
 
 ---
 
