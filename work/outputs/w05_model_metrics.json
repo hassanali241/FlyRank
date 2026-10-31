@@ -1,0 +1,72 @@
+{
+  "split": "GroupKFold(5) by client_hash_id, pooled OOF",
+  "decision_date": "2026-04-01",
+  "base_rate": 0.2699,
+  "rows": 84347,
+  "seed": 42,
+  "table": {
+    "random": {
+      "ROC AUC": 0.502,
+      "avg precision": 0.272,
+      "P@20": 0.3,
+      "P@50": 0.24,
+      "P@500": 0.268,
+      "demand captured@50": 0.006,
+      "demand captured@500": 0.024
+    },
+    "baseline rule (week 4)": {
+      "ROC AUC": 0.595,
+      "avg precision": 0.389,
+      "P@20": 1.0,
+      "P@50": 0.96,
+      "P@500": 0.874,
+      "demand captured@50": 0.069,
+      "demand captured@500": 0.07
+    },
+    "logistic regression": {
+      "ROC AUC": 0.692,
+      "avg precision": 0.48,
+      "P@20": 0.9,
+      "P@50": 0.88,
+      "P@500": 0.806,
+      "demand captured@50": 0.059,
+      "demand captured@500": 0.035
+    },
+    "random forest": {
+      "ROC AUC": 0.706,
+      "avg precision": 0.497,
+      "P@20": 0.95,
+      "P@50": 0.94,
+      "P@500": 0.82,
+      "demand captured@50": 0.007,
+      "demand captured@500": 0.03
+    },
+    "gradient boosting": {
+      "ROC AUC": 0.693,
+      "avg precision": 0.477,
+      "P@20": 0.85,
+      "P@50": 0.88,
+      "P@500": 0.798,
+      "demand captured@50": 0.044,
+      "demand captured@500": 0.036
+    },
+    "baseline rule x demand": {
+      "ROC AUC": 0.592,
+      "avg precision": 0.348,
+      "P@20": 0.7,
+      "P@50": 0.7,
+      "P@500": 0.568,
+      "demand captured@50": 0.29,
+      "demand captured@500": 0.315
+    },
+    "random forest x demand": {
+      "ROC AUC": 0.521,
+      "avg precision": 0.287,
+      "P@20": 0.4,
+      "P@50": 0.48,
+      "P@500": 0.378,
+      "demand captured@50": 0.508,
+      "demand captured@500": 0.509
+    }
+  }
+}
