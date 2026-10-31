@@ -1,0 +1,15 @@
+{
+  "decision_date": "2026-04-01",
+  "rows": 84347,
+  "base_rate": 0.2699,
+  "flagged": 14399,
+  "precision_of_flagged_set": 0.4758,
+  "baseline_precision_at_20": 1.0,
+  "baseline_precision_at_50": 0.96,
+  "baseline_demand_captured_at_50": 0.0691,
+  "baseline_precision_at_500": 0.874,
+  "baseline_precision_at_1000": 0.832,
+  "baseline_average_precision": 0.3892,
+  "random_precision_at_50": 0.24,
+  "random_demand_captured_at_50": 0.0062
+}
