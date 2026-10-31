@@ -151,7 +151,8 @@ def build_frame(con, feature_month: str, label_month: str) -> pd.DataFrame:
 
     df["feature_month"] = feature_month
     df["label_month"] = label_month
-    return df.reset_index(drop=True)
+    # Fixed row order, so seeded randomness and tie-breaks reproduce run to run.
+    return df.sort_values("content_hash_id").reset_index(drop=True)
 
 
 FIVE_FEATURES = ["log_imp", "days_visible", "avg_position", "momentum", "content_age_days"]
