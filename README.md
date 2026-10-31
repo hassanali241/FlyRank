@@ -7,6 +7,7 @@ Track: ML (Applied Search Intelligence). Each assignment has an index folder at 
 | Assignment | Folder | Notebook |
 |---|---|---|
 | 01 (ML-02) Research question and provisional lane | [`assignment-01/`](assignment-01/) | [`w01_research_question.ipynb`](work/notebooks/w01_research_question.ipynb) |
+| 02 (ML-03) Frame the lane as an ML task | [`assignment-02/`](assignment-02/) | [`w02_ml_task_framing.ipynb`](work/notebooks/w02_ml_task_framing.ipynb) |
 
 ---
 
