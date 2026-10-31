@@ -1,0 +1,150 @@
+{
+ "validation": [
+  {
+   "design": "random 80/20 (before)",
+   "method": "forest",
+   "ROC AUC": 0.7482,
+   "avg precision": 0.5515,
+   "P@50": 0.96,
+   "P@500": 0.818,
+   "demand@50": 0.0155,
+   "base rate": 0.271,
+   "rows": 16870.0
+  },
+  {
+   "design": "random 80/20 (before)",
+   "method": "rule",
+   "ROC AUC": 0.5932,
+   "avg precision": 0.3932,
+   "P@50": 0.96,
+   "P@500": 0.774,
+   "demand@50": 0.0338,
+   "base rate": 0.271,
+   "rows": 16870.0
+  },
+  {
+   "design": "grouped by client",
+   "method": "forest",
+   "ROC AUC": 0.7071,
+   "avg precision": 0.4884,
+   "P@50": 0.9,
+   "P@500": 0.832,
+   "demand@50": 0.0126,
+   "base rate": 0.2699,
+   "rows": 84347.0
+  },
+  {
+   "design": "grouped by client",
+   "method": "rule",
+   "ROC AUC": 0.5955,
+   "avg precision": 0.3892,
+   "P@50": 0.96,
+   "P@500": 0.874,
+   "demand@50": 0.0691,
+   "base rate": 0.2699,
+   "rows": 84347.0
+  },
+  {
+   "design": "time-forward to May",
+   "method": "forest",
+   "ROC AUC": 0.7289,
+   "avg precision": 0.5832,
+   "P@50": 0.96,
+   "P@500": 0.938,
+   "demand@50": 0.0167,
+   "base rate": 0.2888,
+   "rows": 98956.0
+  },
+  {
+   "design": "time-forward to May",
+   "method": "rule",
+   "ROC AUC": 0.6342,
+   "avg precision": 0.4706,
+   "P@50": 0.98,
+   "P@500": 0.92,
+   "demand@50": 0.1366,
+   "base rate": 0.2888,
+   "rows": 98956.0
+  },
+  {
+   "design": "sealed June",
+   "method": "forest",
+   "ROC AUC": 0.7032,
+   "avg precision": 0.4964,
+   "P@50": 0.84,
+   "P@500": 0.81,
+   "demand@50": 0.0341,
+   "base rate": 0.2633,
+   "rows": 105270.0
+  },
+  {
+   "design": "sealed June",
+   "method": "rule",
+   "ROC AUC": 0.6022,
+   "avg precision": 0.399,
+   "P@50": 1.0,
+   "P@500": 1.0,
+   "demand@50": 0.0852,
+   "base rate": 0.2633,
+   "rows": 105270.0
+  }
+ ],
+ "tradeoff": [
+  {
+   "slice": "all June pages",
+   "method": "forest",
+   "P@50": 0.84,
+   "P@500": 0.81,
+   "demand@50": 0.0341
+  },
+  {
+   "slice": "all June pages",
+   "method": "rule",
+   "P@50": 1.0,
+   "P@500": 1.0,
+   "demand@50": 0.0852
+  },
+  {
+   "slice": "all June pages",
+   "method": "forest x demand",
+   "P@50": 0.48,
+   "P@500": 0.43,
+   "demand@50": 0.6038
+  },
+  {
+   "slice": "all June pages",
+   "method": "rule x demand",
+   "P@50": 0.78,
+   "P@500": 0.924,
+   "demand@50": 0.5142
+  },
+  {
+   "slice": "June without the event client",
+   "method": "forest",
+   "P@50": 0.82,
+   "P@500": 0.814,
+   "demand@50": 0.0313
+  },
+  {
+   "slice": "June without the event client",
+   "method": "rule",
+   "P@50": 0.82,
+   "P@500": 0.804,
+   "demand@50": 0.0867
+  },
+  {
+   "slice": "June without the event client",
+   "method": "forest x demand",
+   "P@50": 0.48,
+   "P@500": 0.432,
+   "demand@50": 0.6038
+  },
+  {
+   "slice": "June without the event client",
+   "method": "rule x demand",
+   "P@50": 0.76,
+   "P@500": 0.59,
+   "demand@50": 0.5094
+  }
+ ]
+}

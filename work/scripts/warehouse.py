@@ -155,6 +155,32 @@ def build_frame(con, feature_month: str, label_month: str) -> pd.DataFrame:
     return df.sort_values("content_hash_id").reset_index(drop=True)
 
 
+def build_forward_features(con, feature_month: str) -> pd.DataFrame:
+    """Features only, for the decision date right after the last labeled month (no label exists yet).
+
+    Same eligibility as build_frame, minus the label-month coverage check: the client must be
+    tracked every day of the feature month, the page needs 100+ impressions and 30+ days of age.
+    """
+    d_now = days_in(feature_month)
+    feats = con.sql(FEATURE_SQL.format(path=month_path(feature_month), days=d_now)).df()
+    content = con.sql(
+        f"SELECT content_hash_id, content_created_date FROM read_parquet('{file_path('dim_content.parquet')}')"
+    ).df()
+    t = (pd.Period(feature_month) + 1).to_timestamp()
+    df = feats.merge(content, on="content_hash_id", how="left")
+    df = df[
+        df["client_hash_id"].isin(tracked_clients(con, feature_month))
+        & df["imp"].ge(MIN_IMPRESSIONS)
+        & pd.to_datetime(df["content_created_date"]).lt(t - pd.Timedelta(days=30))
+    ].copy()
+    df["log_imp"] = np.log1p(df["imp"])
+    df["momentum"] = np.log1p(df["imp_per_day_h2"].fillna(0)) - np.log1p(df["imp_per_day_h1"].fillna(0))
+    df["content_age_days"] = (t - pd.to_datetime(df["content_created_date"])).dt.days
+    df["ctr_pct"] = df["clicks"] / df["imp"] * 100
+    df["feature_month"] = feature_month
+    return df.sort_values("content_hash_id").reset_index(drop=True)
+
+
 FIVE_FEATURES = ["log_imp", "days_visible", "avg_position", "momentum", "content_age_days"]
 
 
